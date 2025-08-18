@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .picture {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(3, 255, 255, 0.44);
+        }
+        
+        .sand {
+            width: 100%;
+            height: 300px;
+            background-color: #fcf2aa;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .pyramid {
+            width: 200px;
+            height: 200px;
+            background-color: #f7d548;
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: rotate(45deg)
+        }
+        
+        .sun {
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-color: #fff500;
+            position: absolute;
+            right: 50px;
+            top: 100px;
+        }
+        
+        .cloud1 {
+            width: 200px;
+            height: 50px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 200px;
+            left: 0px;
+        }
+        
+        .cloud2 {
+            width: 200px;
+            height: 30px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 250px;
+            left: 90px;
+        }
+        
+        .cloud3 {
+            width: 200px;
+            height: 50px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 200px;
+            right: 50px;
+        }
+        
+        .cloud4 {
+            width: 200px;
+            height: 50px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 250px;
+            right: 120px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="picture">
+        <div class="sand"></div>
+        <div class="pyramid"></div>
+        <div class="sun"></div>
+        <div class="clouds">
+            <div class="cloud1"></div>
+            <div class="cloud2"></div>
+            <div class="cloud3"></div>
+            <div class="cloud4"></div>
+        </div>
+    </div>
+</body>
+
+</html>
