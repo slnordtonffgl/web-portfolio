@@ -68,7 +68,7 @@
             <input type="text">
             <br>
             <button id="add-btn" onclick="Add()">Добавить</button>
-            <button id="clear-btn">Очистить</button>
+            <button id="clear-btn" onclick="ClearDone()">Очистить</button>
         </nav>
         <div id="task-list">
             <div class="task">
@@ -79,44 +79,33 @@
     </main>
 
     <script>
-        /* function testVar() {
-                        if (true) {
-                                         var x = 10
-                                      }
-                            console.log("testVar:", x)
-                                           }
+        let taskArrayText
+        let taskArray
 
-                                 function testLet() {
-                                  if (true) {
-                                            let x = 10
-                                      }console.log("testLet:", x)     }
-                                                 testVar()
-                                                 testLet()*/
+        function TextToArray() {
+            taskArrayText = localStorage.getItem("taskArray")
+            taskArrayText = taskArrayText === null ? "" : taskArrayText
+            taskArray = []
 
-        //let index =  localStorage.getItem("index") 
-        //index = index === null ? 0 : index
-        let index = 0
-            //(условие) ? если true : значение если false
-
-        let taskArrayText = localStorage.getItem("taskArray")
-        let taskArray = []
-
-        let element = ""
-        let j = 0
-        while (j < taskArrayText.length) {
-            if (taskArrayText[j] === ",") {
-                console.log(element)
-                taskArray.push(element)
-                element = ""
-            } else if (j === taskArrayText.length - 1) {
-                element += taskArrayText[j]
-                console.log(element)
-                taskArray.push(element)
-            } else {
-                element += taskArrayText[j]
+            let element = ""
+            let j = 0
+            while (j < taskArrayText.length) {
+                if (taskArrayText[j] === ",") {
+                    console.log(element)
+                    taskArray.push(element)
+                    element = ""
+                } else if (j === taskArrayText.length - 1) {
+                    element += taskArrayText[j]
+                    console.log(element)
+                    taskArray.push(element)
+                } else {
+                    element += taskArrayText[j]
+                }
+                j++
             }
-            j++
+
         }
+
 
         function Add() {
 
@@ -135,7 +124,7 @@
 
             localStorage.setItem("taskArray", taskArray)
 
-            index++
+
 
             //localStorage.setItem("index",index)
 
@@ -143,8 +132,24 @@
             Load()
         }
 
+        function ClearDone() {
+            TextToArray()
+
+            console.log(taskArray)
+
+            //taskArray.pop()
+            
+            let checkbox = document.querySelector(".task input")
+            console.log(checkbox.checked)
+            
+            localStorage.setItem("taskArray", taskArray)
+            Load()
+
+        }
 
         function Load() {
+            TextToArray()
+
             let i = 0
 
             let taskList = document.querySelector("#task-list")
@@ -168,6 +173,7 @@
             }
         }
 
+        TextToArray()
         Load()
 
     </script>
