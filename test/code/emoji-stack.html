@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji Stack</title>
+    <style>
+        #tower {
+            background-color: #b2ffff;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 4.5vh;
+            user-select: none;
+        }
+        
+        button {
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button onclick="AddEmoji()">Добавить</button>
+    <button onclick="DeleteEmoji()">Удалить</button>
+    <br>
+    <div id="tower" onclick="AddEmoji()"></div>
+    <script>
+        let emojis = ['🧊', '💙', '🛹']
+        let tower = []
+
+        console.log(Math.random())
+
+        function AddEmoji() {
+            tower.push(emojis[Math.round(Math.random() * 2)])
+            Show()
+            console.log("add")
+            CheckWin()
+        }
+
+        function DeleteEmoji(event) {
+            tower.pop()
+            Show()
+            console.log("del")
+            event.stopPropagation()
+        }
+
+        function Show() {
+            let i = tower.length - 1
+            document.querySelector("#tower").innerHTML = ""
+
+            while (i >= 0) {
+                document.querySelector("#tower").innerHTML += `<div onclick="DeleteEmoji(event)">${tower[i]} </div>`
+                i--
+            }
+        }
+
+        function CheckWin() {
+            if (tower.length === 15) {
+                let i = 0
+                let chosenEmoji = tower[0]
+                while (i < tower.length) {
+                    if (tower[i] === chosenEmoji) {
+                        console.log(tower[i])
+                    }else {
+                         console.log("LUSER!")
+                        return
+                    }
+                    i++
+                }
+                console.log("WINNER!")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
