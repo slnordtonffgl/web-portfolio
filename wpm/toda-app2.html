@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To da app</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --p-color: rgba(173, 0, 173, 0.63);
+            --s-color: #f1cefc;
+            --btn-1-color: #fa4bf5;
+            --btn-2-color: #9b008f;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--s-color);
+        }
+
+        nav {
+            width: 100%;
+            height: 100%;
+            background-color: var(--p-color);
+            padding: 20px;
+            border-bottom: solid rgb(132, 28, 150);
+        }
+
+        nav input {
+            width: 100%;
+            height: 30px;
+            margin: 10px;
+            margin-bottom: 10px;
+            height: 30px;
+        }
+
+        #add-btn {
+            background-color: var(--btn-1-color);
+            width: 49%;
+            height: 40px;
+            font-size: 25px;
+            border-radius: 15px;
+        }
+
+        #clear-btn {
+            background-color: var(--btn-2-color);
+            width: 50%;
+            height: 40px;
+            font-size: 25px;
+            border-radius: 15px;
+        }
+
+        .task {
+            width: 100%;
+            margin-top: 20px;
+            background-color: rgb(178, 58, 199);
+            padding: 20px;
+            border-bottom: solid rgb(117, 10, 136);
+        }
+
+        .task-text {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+
+            <input type="text">
+            <br>
+            <button id="add-btn" onclick="Add()">Добавить</button>
+            <button id="clear-btn" onclick="ClearDone()">Очистить</button>
+        </nav>
+        <div id="task-list">
+            <div class="task">
+                <input type="checkbox">
+                <div class="task-text">текст задачи</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let taskArrayText
+        let taskArray
+
+        function TextToArray() {
+            taskArrayText = localStorage.getItem("taskArray")
+            taskArrayText = taskArrayText === null ? "" : taskArrayText
+            taskArray = []
+
+            let element = ""
+            let j = 0
+            while (j < taskArrayText.length) {
+                if (taskArrayText[j] === ",") {
+                    console.log(element)
+                    taskArray.push(element)
+                    element = ""
+                } else if (j === taskArrayText.length - 1) {
+                    element += taskArrayText[j]
+                    console.log(element)
+                    taskArray.push(element)
+                } else {
+                    element += taskArrayText[j]
+                }
+                j++
+            }
+
+        }
+
+        function Add() {
+
+            let inputBox = document.querySelector("nav input")
+           
+            taskArray.push(inputBox.value)
+
+            localStorage.setItem("taskArray", taskArray)
+            inputBox.value = ""
+            Load()
+        }
+
+        function ClearDone() {
+            TextToArray()
+
+            console.log(taskArray)
+
+
+            let tasks = document.querySelectorAll(".task")
+
+            let i = 0
+            while (i = tasks.length) {
+                let checkbox = tasks[i].querySelector("input")
+                let text = tasks[i].querySelector(".task-text").textContent
+                let taskArrayCopy = taskArray.slice(0, taskArray.length)
+
+                console.log(text, checkbox.checked)
+
+                if (checkbox.cehcked) {
+                    let j = 0
+                    while (j < taskArray.length) {
+                        console.log("условие:",
+                            text, taskArray[j], text === taskArray[j], text..length, taskArray[j].length)
+
+                        if (text === taskArray[j]) {
+                            console.log("1:", taskArrayCopy, text)
+                            console.log("j:"
+                                j)
+                            taskArrayCopy.splice(j, j)
+                            console.log("2:", taskArrayCopy, text)
+                            console.log("j:"
+                                j)
+                        }
+                        j++
+
+                    }
+                    taskArray = taskArrayCopy.slice(0, taskArrayCopy.length)
+                }
+
+                i++
+            }
+            localStorage.setItem("taskArray", taskArray)
+            Load()
+
+        }
+
+        function Load() {
+            TextToArray()
+
+            let i = 0
+
+            let taskList = document.querySelector("#task-list")
+            taskList.innerHTML = ""
+
+
+            while (i < taskArray.length) {
+
+                let taskText = taskArray[i]
+
+                let prefab =
+                    `<div class="task">
+                <input type="checkbox">
+                <div class="task-text">${taskText}</div>
+            </div>`
+
+
+                taskList.innerHTML += prefab
+
+                i++;
+            }
+        }
+
+        TextToArray()
+        Load()
+    </script>
+</body></html>
