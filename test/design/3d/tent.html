@@ -17,14 +17,13 @@
             height: 100vh;
         }
         
-main {
+        main {
             display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
             height: 400px;
             width: 20px;
-            background-color: rgba(88, 119, 248, 0.79);
             transform: rotateY(45deg) translateY(100px);
             transform-style: preserve-3d;
             animation: Spin 8s linear infinite;
@@ -37,8 +36,7 @@ main {
             height: 1000px;
             transform: rotateX(90deg);
             border-radius: 100%;
-            background:  radial-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.8)),
-            repeating-linear-gradient(45deg,#00ff00 0 10px,#0bc60b 0 20px);
+            background: radial-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.8)), repeating-linear-gradient(45deg, #00ff00 0 10px, #0bc60b 0 20px);
         }
         
         #tent {
@@ -49,40 +47,44 @@ main {
             align-items: center;
             transform-style: preserve-3d;
         }
-        .wall{
+        
+        .wall {
             position: absolute;
         }
+        
         .wall:nth-child(1) {
             width: 100px;
             height: 100px;
             background-color: #e293ff;
             transform: rotateZ(45deg) translateZ(100px);
             border: black 2px solid;
-            background: linear-gradient(45deg,#e293ff 48%,black,#e293ff 50%);
-            
+            background: linear-gradient(45deg, #e293ff 48%, black, #e293ff 50%);
         }
-         .wall:nth-child(2) {
+        
+        .wall:nth-child(2) {
             width: 100px;
             height: 100px;
             background-color: #e293ff;
             transform: rotateZ(45deg) translateZ(-100px);
             border: black 2px solid;
         }
-         .wall:nth-child(3) {
+        
+        .wall:nth-child(3) {
             width: 200px;
             height: 150px;
             background-color: #e293ff;
-            transform:  translateX(70px) rotateY(90deg) rotateX(45deg) translateY(-25px);
+            transform: translateX(70px) rotateY(90deg) rotateX(45deg) translateY(-25px);
             border: black 2px solid;
         }
-         .wall:nth-child(4) {
+        
+        .wall:nth-child(4) {
             width: 200px;
             height: 150px;
             background-color: #e293ff;
-            transform:  translateX(-70px) rotateY(-90deg) rotateX(45deg) translateY(-25px);
+            transform: translateX(-70px) rotateY(-90deg) rotateX(45deg) translateY(-25px);
             border: black 2px solid;
-            
         }
+        
         @keyframes Spin {
             0% {
                 transform: translateY(100px) rotateY(0deg);
