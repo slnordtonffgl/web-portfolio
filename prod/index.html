@@ -2,9 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0," />
+    <link rel="stylesheet" href="assets/css/theme.css">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: var(--color-bg);
+        }
+        .main-header{
+            background-color: rgb(255, 235, 79);
+            display: flex;
+            padding: 1%;
+        }
+        .main-header-icon{
+            background-color: rgb(247, 190, 0);
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+             display: flex;
+            justify-content: center;
+            align-items:center;
+            border-radius: 100%;
+        }
+        .main-header-icon img{
+            background-color: #ffed17;
+            width: 200%;
+            
+        }
+        .main-nav{
+            background-color: #e5aa3b;
+            flex-grow: 1;
+            display: flex;
+            gap: 16px;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            border-radius: 10%;
+        }
+        .main-nav a{
+            text-decoration: none;
+            background-color: rgb(255, 184, 51);
+            flex: 1;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            border-radius: 10px;
+            color: var(--color-text);
+        }
+        .main-nav a:hover{
+            background-color: rgba(252, 210, 70, 0.87);
+        }
+        .main-header-h1{
+            text-align: center;
+            color: rgb(219, 160, 0);
+            font-size: 2.0rem;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            border-radius: 20px;
+            margin: 1%;
+        }
+    </style>
 </head>
 <body>
-    
+   <header class="main-header">
+       <div class="main-header-icon">
+         <img src="assets/imgs/images.jpg" alt="">
+       </div>
+
+       <nav class="main-nav">
+           <a href="#">Главная</a>
+           <a href="#">Дизайн</a>
+           <a href="#">Код</a>
+       </nav>
+       <h1 class="main-header-h1">WEABSITE</h1> 
+    </header>   
 </body>
 </html>
