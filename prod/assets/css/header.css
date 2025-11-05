@@ -1,0 +1,106 @@
+ .main-header {
+            background-color: rgb(255, 235, 79);
+            display: flex;
+            padding: 1%;
+            animation: HeaderAnim 1s; 
+        }
+        
+        .main-header-icon {
+            background-color: rgb(247, 190, 0);
+            width: clamp(4rem, 5vw, 3rem);
+            height: clamp(5rem, 5vw, 3rem);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+        }
+        
+        .main-header-icon img {
+            background-color: #ffed17;
+            width: 200%;
+        }
+        
+        .main-nav {
+            background-color: var(--color-sufrace);
+            flex-grow: 1;
+            display: flex;
+            gap: 16px;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            border-radius: 10%;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            background-color: rgb(255, 184, 51);
+            flex: 1;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: var(--color-text);
+        }
+        
+        .main-nav a:hover {
+            background-color: rgba(252, 210, 70, 0.87);
+        }
+        
+        .main-header-h1 {
+            text-align: center;
+            color: rgb(219, 160, 0);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            margin: 1%;
+        }
+        
+        .main-nav-dropdown {
+            display: none;
+        }
+        
+        .main-nav-dropdown:hover + .main-nav {
+            display: block;
+            position: absolute;
+        }
+        
+        .main-nav-box {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        @keyframes HeaderAnim{
+            0%{
+              opacity: 0;  
+            }
+            100%{
+              opacity: 1;  
+            }
+        }
+        @media (max-width: 480px) {
+            .main-nav {
+                display: none;
+                top: 100%;
+                /width: 100%;
+            }
+            .main-nav-dropdown {
+                display: block;
+                font-size: 3rem;
+                color: var(--color-text);
+                flex: 1;
+                / background: yellow;
+                text-align: left;
+            }
+            .main-nav-dropdown:active + .main-nav {
+                display: block;
+                position: absolute;
+            }
+            .main-nav-box:focus-within.main-nav {
+                display: block;
+                position: absolute;
+            } }
