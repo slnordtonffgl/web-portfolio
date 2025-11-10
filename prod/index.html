@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/slide-show-feed.css">
     <title>Document</title>
     <style>
         .hero {
             height: 500px;
-            background-color: #e09352;
+            /background-color: #e09352;
         }
         
+        .hero-bg{
+            width: 100%;
+            height: 500px;
+            background: 10% 10% / 10% 10% repeating-linear-gradient(90deg,rgb(239, 168, 7),#fff500,rgba(224, 147, 82, 0.77));
+            position: absolute;
+            z-index: -1;
+        }
         .hero-fg {
-            background-color: #ba9058;
+            /background-color: #ba9058;
             height: 100%;
             display: flex;
         }
         
         .hero-fg-text {
-            background-color: rgba(255, 213, 118, 0.86);
+            /background-color: rgba(255, 213, 118, 0.86);
             padding: var(--space-m);
             flex: 1;
         }
@@ -39,23 +47,23 @@
         }
         
         .hero-fg-btns {
-            background-color: #db9f4f;
+           / background-color: #db9f4f;
             flex-direction: column;
             display: flex;
             justify-content: center;
             align-items: center;
             flex: 1;
             padding: var(--space-m);
-            
         }
-        .hero-left{
+        
+        .hero-left {
             width: 50%;
             display: flex;
             flex-direction: column;
         }
         
         .hero-fg-pbtn {
-            background-color: #fff042;
+           / background-color: #fff042;
             text-align: center;
             text-decoration: none;
             font-size: 20px;
@@ -64,7 +72,7 @@
         }
         
         .hero-fg-sbtn {
-            background-color: #fff042;
+            /background-color: #fff042;
             text-align: center;
             text-decoration: none;
             font-size: 20px;
@@ -80,39 +88,44 @@
             justify-content: center;
             align-items: center;
         }
-        .hero-fg-img-1{
+        
+        .hero-fg-img-1 {
             background-color: #ffe7c5;
             height: 80%;
             width: 90%;
             margin-bottom: 6.6rem;
             border-radius: 10px;
-         }
+            overflow: hidden;
+            position: relative;
+        }
         
         .hero-fg-info {
-            background-color: #ebb779;
+            /background-color: #ebb779;
             width: 50%;
             height: 100%;
-             }
-        img{
-            width: 100%;
-            height: 100%;
-           
+            text-decoration: none;
         }
-        .button-info{
-             background-color: #ebb779;
-             gap:10px;
-             font-size: 50px;
-             justify-content: center;
-             align-items: center;
-             text-align: center;
-             padding: 50px;
-             text-decoration: none;
+        
+
+        
+       .butn-info {
+            /background-color: #ebb779;
+            font-size: 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+          
         }
-        .test{
+        
+        .test {
             height: 300px;
             margin-bottom: 5px;
-            background-color: rgba(165, 77, 221, 0.72);
+           / background-color: rgba(255, 255, 144, 0.72);
         }
+       
+        
+       
     </style>
 </head>
 
@@ -149,15 +162,22 @@
                 </div>
                 <div class="hero-fg-imgs">
                     <div class="hero-fg-img-1">
-                       <img src="assets/imgs/picters.yellow.jpg" alt="">
+                        <div class="slide-show-feed">
+                            <img src="assets/imgs/1.jpg" alt="">
+                            <img src="assets/imgs/2.jpg" alt="">
+                            <img src="assets/imgs/3.jpg" alt="">
+                        </div>
+                        <!--<img src="assets/imgs/picters.yellow.jpg" alt="">-->
                     </div>
-                 </div>
+                </div>
                 <div class="hero-fg-info">
-                   <div class="button-info">
+                    <div class="button-info">
                         <a class="butn-info" href="#">💌</a>
-                        <br><br>
+                        <br>
+                        <br>
                         <a class="butn-info" href="#">📷</a>
-                         <br><br>
+                        <br>
+                        <br>
                         <a class="butn-info" href="#">📞</a>
                     </div>
                 </div>
