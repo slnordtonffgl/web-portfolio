@@ -8,132 +8,78 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/slide-show-feed.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
     <title>Document</title>
     <style>
-        .hero {
-            height: 500px;
-            /background-color: #e09352;
-        }
-        
-        .hero-bg{
-            width: 100%;
-            height: 500px;
-            background: 10% 10% / 10% 10% repeating-linear-gradient(90deg,rgb(239, 168, 7),#fff500,rgba(224, 147, 82, 0.77));
-            position: absolute;
-            z-index: -1;
-        }
-        .hero-fg {
-            /background-color: #ba9058;
-            height: 100%;
-            display: flex;
-        }
-        
-        .hero-fg-text {
-            /background-color: rgba(255, 213, 118, 0.86);
-            padding: var(--space-m);
-            flex: 1;
-        }
-        
-        .hero-fg-h2 {
-            font-size: 25px;
-            text-align: center;
-            color: #7e4903;
-        }
-        
-        .hero-fg-p {
-            font-size: 20px;
-            text-align: center;
-            color: #c67100;
-        }
-        
-        .hero-fg-btns {
-           / background-color: #db9f4f;
-            flex-direction: column;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-            padding: var(--space-m);
-        }
-        
-        .hero-left {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .hero-fg-pbtn {
-           / background-color: #fff042;
-            text-align: center;
-            text-decoration: none;
-            font-size: 20px;
-            color: #aa6f00;
-            border-radius: 10px;
-        }
-        
-        .hero-fg-sbtn {
-            /background-color: #fff042;
-            text-align: center;
-            text-decoration: none;
-            font-size: 20px;
-            color: #e09352;
-            border-radius: 10px;
-        }
-        
-        .hero-fg-imgs {
-            background-color: #f0ffb2;
-            height: 100%;
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .hero-fg-img-1 {
-            background-color: #ffe7c5;
-            height: 80%;
-            width: 90%;
-            margin-bottom: 6.6rem;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .hero-fg-info {
-            /background-color: #ebb779;
-            width: 50%;
-            height: 100%;
-            text-decoration: none;
-        }
-        
+        .skills {
 
-        
-       .butn-info {
-            /background-color: #ebb779;
-            font-size: 50px;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            text-decoration: none;
-          
+            background-color: #e2ab43;
         }
         
-        .test {
+        .skills-kard {
+            background-color: #e2bf2b;
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+        
+        .skills-row {
+            flex-direction: row;
+            display: flex;
+            background-color: rgb(237, 195, 80);
+            border: #935a17 4px solid;
             height: 300px;
-            margin-bottom: 5px;
-           / background-color: rgba(255, 255, 144, 0.72);
+            gap: 15px;
+            justify-content: space-around;
         }
-       
         
-       
+        .skills-img {
+            background-color: #ffffa5;
+            height: 30%;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .skills-img img {
+            background-color: #d49d05;
+            border-radius: 100%;
+            height: 100%;
+            width: 100px;
+        }
+        
+        .skills-text {
+            background: #ffad2a;
+            height: 70%;
+            flex: 1;
+            text-align: center;
+            padding: 25px;
+            color: #896431;
+        }
+
+        .best{
+            background-color: aqua;
+         }
+        .best-row{
+            border: red 5px solid;
+            padding: 10px;
+            display: flex;
+        }
+        .best-row img{
+            width: 50px;
+            border-radius: 50%;
+            
+        }
     </style>
 </head>
 
 <body>
+    <!--ШАПКА-->
     <header class="main-header">
         <div class="main-header-icon">
             <img src="assets/imgs/images.jpg" alt="">
         </div>
+        <!--НАВИГАЦИЯ-->
         <nav class="main-nav-box">
             <a href="#" class="main-nav-dropdown">=</a>
             <nav class="main-nav">
@@ -144,7 +90,9 @@
         </nav>
         <h1 class="main-header-h1">WEABSITE</h1>
     </header>
+    <!--ОСНОВНАЯ-->
     <main>
+        <!--БАННЕР-->
         <section class="hero">
             <div class="hero-bg"></div>
             <div class="hero-fg">
@@ -183,9 +131,87 @@
                 </div>
             </div>
         </section>
-        <section class="test"></section>
-        <section class="test"></section>
-        <section class="test" id="test"></section>
+
+        <section class="skills">
+
+            <div class="skills-row">
+                <div class="skills-kard">
+                    <div class="skills-img">
+                        <img src="assets/imgs/%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20JS%20.jpg" alt="">
+                    </div>
+
+                    <div class="skills-text">
+                        <h1 class="skills-h1">Lorem ipsum dolor sit amet</h1>
+                        <p class="skills-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim sit rerum amet. Odit, provident excepturi! Eligendi laudantium modi alias ratione at nemo, iure, ipsam!Odit, provident excepturi! Eligendi</p>
+                    </div>
+                </div>
+
+                <div class="skills-kard">
+                    <div class="skills-img">
+                        <img src="assets/imgs/CSS%20%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0.png" alt="">
+                    </div>
+
+                    <div class="skills-text">
+                        <h1 class="skills-h1">Lorem ipsum dolor sit amet</h1>
+                        <p class="skills-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim sit rerum amet. Odit, provident excepturi! Eligendi laudantium modi alias ratione at nemo, iure, ipsam!Odit, provident excepturi! Eligendi</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="skills-row">
+                <div class="skills-kard">
+                    <div class="skills-img">
+                        <img src="assets/imgs/%D0%9F%D1%8D%D0%B9%D1%82%D0%BE%D0%BD%20.png" alt="">
+                    </div>
+
+                    <div class="skills-text">
+                        <h1 class="skills-h1">Lorem ipsum dolor sit amet</h1>
+                        <p class="skills-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim sit rerum amet. Odit, provident excepturi! Eligendi laudantium modi alias ratione at nemo, iure, ipsam!Odit, provident excepturi! Eligendi</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        <section class="best">
+            <div class="best-row">
+                <img src="https://i.pinimg.com/564x/67/e2/f5/67e2f581560cdcfc71b7116d9a8d80e5.jpg" alt="">
+                <p class="best-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim sit rerum amet.</p>
+                <a href="">Тыкни сюда</a>
+               
+            </div>
+
+           <br>
+           
+            <div class="best-row">
+                <img src="https://i.pinimg.com/564x/67/e2/f5/67e2f581560cdcfc71b7116d9a8d80e5.jpg" alt="">
+                <p class="best-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim sit rerum amet.</p>
+                <a href="">Тыкни сюда</a>
+               
+            </div>
+
+           <br>
+           
+            <div class="best-row">
+               <img src="https://i.pinimg.com/564x/67/e2/f5/67e2f581560cdcfc71b7116d9a8d80e5.jpg" alt="">
+                <p class="best-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim sit rerum amet.</p>
+                <a href="#">Тыкни сюда</a>
+                
+            </div>
+        </section>
+
+        <section class="code">
+
+        </section>
+
+        <section class="desing">
+
+        </section>
     </main>
 </body>
 
