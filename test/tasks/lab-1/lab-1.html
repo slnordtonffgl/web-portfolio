@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Страница с двумя дивами и кнопками</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .box {
+            display: flex;
+        }
+        
+        .left-box {
+            width: 50%;
+            height: 350px;
+            padding: 10px;
+            background-color: #fcdfb9;
+            
+        }
+        
+        .right-box {
+            width: 50%;
+            height: 50%;
+            padding: 30px;
+            margin-top: 100px;
+            background-color: #f0c285;
+        }
+        
+        .left-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .button-line {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            background-color: #637e63;
+            width: 200%;
+            
+        }
+        
+        .button-line button {
+            padding: 5px 15px;
+            cursor: pointer;
+            background-color: #9fbc97;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="left-box">
+            <img src="https://www.thoughtco.com/thmb/rip9NU8E4ERKbO7hBjwPc98UtfM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lion-805084_1920-c62a5582169c4bae82553d9a21c1a0bb.jpg" alt="Картинка" />
+            <div class="button-line">
+                <button>Кнопка 1</button>
+                <button>Кнопка 2</button>
+                <button>Кнопка 3</button>
+            </div>
+        </div>
+        <div class="right-box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque asperiores excepturi unde magni laudantium earum atque optio cum vitae, suscipit esse. Eos odio incidunt explicabo. Quae eum est magnam, mollitia?</p>
+           
+        </div>
+    </div>
+
+</body>
+
+</html>
