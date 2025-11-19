@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Страница с двумя дивами и кнопками</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            
+        }
+        
+        .box {
+            display: flex;
+        }
+        
+       
+        
+        .left-box {
+            width: 500px;
+            background-color: #fcdfb9;
+        }
+        
+        .right-box {
+            width: 50%;
+            height: 50%;
+            padding: 30px;
+            margin-top: 100px;
+            background-color: #f0c285;
+        }
+        
+        textarea {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 10px
+        }
+        
+        .left-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .a-line {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            background-color: #637e63;
+            width: 200%;
+        }
+        
+        .a-line a {
+            padding: 5px 15px;
+            cursor: pointer;
+            background-color: #9fbc97;
+            border-radius: 10px;
+            margin: 5px;
+            text-decoration: none;
+            color: #fcdfb9;
+        }
+        
+        button {
+            background-color: #96ba77;
+            color: #3e6a3e;
+            margin-left: 150px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+       <div class="left-box">
+            <img src="https://www.thoughtco.com/thmb/rip9NU8E4ERKbO7hBjwPc98UtfM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lion-805084_1920-c62a5582169c4bae82553d9a21c1a0bb.jpg" alt="Картинка" />
+                
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ducimus commodi quibusdam ipsa quis earum vel, aut consectetur, perspiciatis accusamus labore ea aspernatur fugiat ullam?</p>
+
+            <div class="a-line">
+                <a href="">Кнопка 1</a>
+                <a href="">Кнопка 2</a>
+                <a href="">Кнопка 3</a>
+            </div>
+        </div> 
+            <div class="right-box">
+            <textarea placeholder="Имя" name="ggg" id="" cols="50" rows="1"></textarea>
+            <textarea placeholder="Возраст" name="" id="" cols="50" rows="1"></textarea>
+            <textarea placeholder="номер телефона" name="" id="" cols="50" rows="1"></textarea>
+
+            <button>Подать заявку</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
